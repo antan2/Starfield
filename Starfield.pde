@@ -32,8 +32,8 @@ class planet { //base class
     crot += 0.02;
   }
   void gravity() {
-    caccelx = 0.1*(celestial[0].cx-cx)/(Math.abs(celestial[0].cx-cx));
-    caccely = 0.1*(celestial[0].cy-cy)/(Math.abs(celestial[0].cy-cy));
+    caccelx = 0.5*(celestial[0].cx-cx)/(Math.abs(celestial[0].cx-cx));
+    caccely = 0.5*(celestial[0].cy-cy)/(Math.abs(celestial[0].cy-cy));
     if (distance(cx, cy, 500, 500)>500) {
       cx += (celestial[0].cx-cx)/(Math.abs(celestial[0].cx-cx));
       cy += (celestial[0].cy-cy)/(Math.abs(celestial[0].cy-cy));
@@ -97,8 +97,8 @@ class sun extends planet { //oddball class
     }
   }
   void gravity() {
-    caccelx = 0.05*(500-cx)/(Math.abs(500-cx));
-    caccely = 0.05*(500-cy)/(Math.abs(500-cy));
+    caccelx = 0.1*(500-cx)/(Math.abs(500-cx));
+    caccely = 0.1*(500-cy)/(Math.abs(500-cy));
   }
   void collide() {
     for (int i = 1; i < celestial.length; i++) {
