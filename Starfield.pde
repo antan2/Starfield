@@ -205,12 +205,12 @@ void draw() {
   fontText("collisions " + coltrue, 990, 20, 10, 20, color(255, 0, 0), "RIGHT", "digital");
 }
 //text function(s) start:
-public char[] a0z25 = {' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
-public int[] digiFont = {0, 14240, 14256, 12432, 11376, 12944, 12928, 12720, 6048, 2112, 1072, 4741, 4240, 15520, 5289, 13488, 14208, 13489, 14209, 13104, 10304, 5296, 4230, 5360, 15, 14, 8214, 1060, 10128, 9520, 5920, 13104, 13232, 8198, 14256, 14128, 13494};
-public int nthFromTheEndNum(int n, int num) {
+char[] a0z25 = {' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
+int[] digiFont = {0, 14240, 14256, 12432, 11376, 12944, 12928, 12720, 6048, 2112, 1072, 4741, 4240, 15520, 5289, 13488, 14208, 13489, 14209, 13104, 10304, 5296, 4230, 5360, 15, 14, 8214, 1060, 10128, 9520, 5920, 13104, 13232, 8198, 14256, 14128, 13494};
+int nthFromTheEndNum(int n, int num) {
   return (int)(num/Math.pow(10, n-1))%10;
 }
-public int[] nToBinary(int num) {
+int[] nToBinary(int num) {
   int[] ans;
   int tempI = 0;
   int tempNum = num;
@@ -228,7 +228,7 @@ public int[] nToBinary(int num) {
   }
   return ans;
 }
-public void fontText(String s, float x, float y, float w, float h, int c, String a, String f) {
+void fontText(String s, float x, float y, float w, float h, int c, String a, String f) {
   float tempX = x;
   if (a == "LEFT") {
     tempX = x+w/2;
@@ -248,7 +248,7 @@ public void fontText(String s, float x, float y, float w, float h, int c, String
     tempX += w*1.5;
   }
 }
-public void letter(char c, float x, float  y, float w, float h, String f) {
+void letter(char c, float x, float  y, float w, float h, String f) {
   int tempN = 0;
   for (int k = 0; k < a0z25.length; k++) {
     if (c == a0z25[k]) {
@@ -308,3 +308,5 @@ public void letter(char c, float x, float  y, float w, float h, String f) {
 void mousePressed() {
   coltrue = !coltrue;
 }
+
+
