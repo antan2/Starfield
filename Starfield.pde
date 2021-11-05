@@ -162,7 +162,7 @@ class destroyed extends planet { //technically an extended class, just used to r
 float[] stars = new float [3000];//just background details, unrelated to the celestial objects
 boolean coltrue = false;
 int time = 0;
-int count = 0;
+int counter = 0;
 float distance(float x1, float y1, float x2, float y2) {
   return(float)(Math.sqrt(Math.pow(x1-x2, 2)+ Math.pow(y1-y2, 2)));
 }
@@ -188,7 +188,7 @@ void draw() {
     ellipse(stars[i], stars[i+1], 5, 5);
     stars[i+2] += 0.5;
   }
-  count = 0;
+  counter = 0;
   for (int i = 0; i < celestial.length; i++) {
     celestial[i].move();
     celestial[i].gravity();
@@ -201,7 +201,7 @@ void draw() {
   fontText("click to toggle", 500, 800+15*sin(time/20.0), 20, 30, color(255, 0, 0), "CENTER", "digital");
   fontText("collisions", 500, 850+15*sin(time/20.0), 20, 30, color(255, 0, 0), "CENTER", "digital");
   time++;
-  fontText("planets " + count, 10, 20, 10, 20, color(255, 0, 0), "LEFT", "digital");
+  fontText("planets " + counter, 10, 20, 10, 20, color(255, 0, 0), "LEFT", "digital");
   fontText("collisions " + coltrue, 990, 20, 10, 20, color(255, 0, 0), "RIGHT", "digital");
 }
 //text function(s) start:
