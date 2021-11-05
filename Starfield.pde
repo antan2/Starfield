@@ -54,7 +54,7 @@ class planet { //base class
     }
   }
   void count() {
-    count++;
+    counter++;
   }
   void show() {
     translate(cx, cy);
