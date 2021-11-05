@@ -61,13 +61,13 @@ class planet { //base class
     rotate(crot);
     noStroke();
     fill(ccol2);
-    arc(0, 0, csiz*1.5, csiz*0.75, PI-0.05, TWO_PI+0.05, CHORD);
+    arc(0, 0, csiz*1.5, csiz*0.75, PI-0.05, TWO_PI+0.05);
     fill(ccol1);
     ellipse(0, 0, csiz, csiz);
     fill(ccol2);
-    arc(0, 0, csiz*1.5, csiz*0.75, -0.05, PI+0.05, CHORD);
+    arc(0, 0, csiz*1.5, csiz*0.75, -0.05, PI+0.05);
     fill(ccol1);
-    arc(0, -(csiz*+0.1), csiz, csiz*0.5, -0.05, PI+0.05, CHORD);
+    arc(0, -(csiz*+0.1), csiz, csiz*0.5, -0.05, PI+0.05);
     rotate(-crot);
     translate(-cx, -cy);
   }
